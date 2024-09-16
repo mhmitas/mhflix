@@ -7,8 +7,8 @@ const layout = ({ children }) => {
         <div className=''>
             <Navbar />
             <div className='flex'>
-                <div className='hidden md:block'><Sidebar /></div>
-                <div className='flex-1 w-full mt-16 md:ml-64'>
+                <div className='hidden lg:block'><Sidebar /></div>
+                <div className='flex-1 w-full lg:ml-64'>
                     {children}
                 </div>
             </div>

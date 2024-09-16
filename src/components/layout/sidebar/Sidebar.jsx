@@ -22,10 +22,10 @@ import Link from "next/link"
 export default function Sidebar() {
     return (
         <>
-            <div className="w-64 mt-16 md:block hidden overflow-y-auto fixed bg-background">
+            <div className="w-64 lg:block hidden overflow-y-auto fixed bg-background">
                 <SidebarContent />
             </div>
-            <div className="block md:hidden z-50">
+            <div className="block lg:hidden z-50">
                 <Sheet key={'left'}>
                     <SheetTrigger asChild>
                         <Button
@@ -58,7 +58,7 @@ export default function Sidebar() {
 
 function SidebarContent() {
     return (
-        <div className="space-y-2 h-[calc(100vh-64px)] py-2 md:p-0 w-full">
+        <div className="space-y-2 h-[calc(100vh-64px)] py-2 lg:p-0 w-full">
             <div className="p-2">
                 <h2 className="mb-2 px-4 text-lg font-semibold tracking-tight">Discover</h2>
                 <div className="space-y-1">
@@ -74,6 +74,7 @@ function SidebarContent() {
             <div className="p-2 pb-16">
                 <h2 className="mb-2 px-4 text-lg font-semibold tracking-tight">Library</h2>
                 <div className="space-y-1">
+
                     {navigationItems[1]?.items.map((item) => (
                         <Button key={item.label} variant="ghost" className="w-full text-base justify-start gap-3">
                             <span className="w-6 *:w-full">{item.icon}</span>

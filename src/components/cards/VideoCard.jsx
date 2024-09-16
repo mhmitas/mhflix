@@ -11,7 +11,7 @@ const VideoCard = ({ video }) => {
     const uploaded = moment(new Date(video.createdAt), "YYYYMMDD").fromNow();
 
     return (
-        <div className='h-full w-full max-w-xl mx-auto rounded-lg sm:rounded-xl group hover:cursor-pointer duration-500'>
+        <div className='h-full w-full max-w-xl mx-auto rounded-lg sm:rounded-xl group hover:cursor-pointer duration-500 mb-2'>
 
             {/* thumbnail */}
             <Link href={`/play-video/${video?._id}`}>
@@ -37,6 +37,7 @@ const VideoCard = ({ video }) => {
                     <div className='flex items-center gap-1 text-color-gray leading-4 text-sm'>
                         <h3 className='flex items-center gap-1'>
                             <ThumbsUp className='size-4' />
+                            {/* need some improvement */}
                             {formatNumber(likes)}
                         </h3>
                         ▪

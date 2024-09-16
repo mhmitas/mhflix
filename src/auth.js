@@ -34,6 +34,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                             avatar: user.image,
                             emailVerified: true
                         })
+                        console.log({ newUser })
                         if (!newUser) {
                             throw new Error("User creation error")
                         }
@@ -58,21 +59,22 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         },
         jwt({ token, user }) {
             if (user) {
+                // console.log("user from jwt callback:", user)
                 token.id = user?.id;
                 token.name = user?.name;
                 token.username = user?.username;
-                token.image = user?.avatar;
+                token.image = user?.image;
             }
             return token
         },
         session({ session, token }) {
+            // console.log("token from session callback", token);
             if (session) {
                 session.user.id = token?.id;
                 session.user.name = token?.name;
                 session.user.username = token?.username;
                 session.user.image = token?.image;
             }
-            // console.log("token from session callback", token);
             return session
         },
     }

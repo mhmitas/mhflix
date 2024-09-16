@@ -1,9 +1,8 @@
 import React from 'react'
-import { Button } from '../../ui/button'
 import Link from 'next/link'
-import { Bell, Menu, User, Video } from 'lucide-react'
 import SearchBar from './SearchBar'
 import Sidebar from '../sidebar/Sidebar'
+import { NavbarRightSide } from './NavbarRightSide'
 
 export const Navbar = () => {
 
@@ -24,18 +23,7 @@ export const Navbar = () => {
                     <SearchBar />
                     {/* Right section */}
                     <div className="flex items-center gap-1">
-                        <Button variant="ghost" size="icon" className="hidden sm:inline-flex">
-                            <Video className="h-5 w-5" />
-                            <span className="sr-only">Create</span>
-                        </Button>
-                        <Button variant="ghost" size="icon">
-                            <Bell className="h-5 w-5" />
-                            <span className="sr-only">Notifications</span>
-                        </Button>
-                        <Button variant="ghost" size="icon">
-                            <User className="h-5 w-5" />
-                            <span className="sr-only">Profile</span>
-                        </Button>
+                        <NavbarRightSide />
                     </div>
                 </div>
             </div>

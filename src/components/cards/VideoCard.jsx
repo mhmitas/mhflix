@@ -31,7 +31,7 @@ const VideoCard = ({ video }) => {
                     <Link href={`/play-video/${video?._id}`}><h1 title={title} className='text-lg line-clamp-2 leading-6'>{title}</h1></Link>
 
                     {/* channel name */}
-                    <Link href={`/profile/@${channel?.username}`}><h1 className={`text-color-gray hover:text-info leading-6`}>{channel?.fullName}</h1></Link>
+                    <Link href={`/profile/@${channel?.username}`}><h1 className={`hover:underline leading-6`}>{channel?.fullName}</h1></Link>
 
                     {/* like time and video */}
                     <div className='flex items-center gap-1 text-color-gray leading-4 text-sm'>

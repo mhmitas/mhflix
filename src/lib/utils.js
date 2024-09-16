@@ -16,3 +16,11 @@ export function formatNumber(num) {
     return num.toString(); // Less than 1,000
   }
 }
+
+export function generateUsername(name) {
+  let username = name.toLowerCase().replace(/[^a-zA-Z]/g, '').trim();
+  const randomNumber = Date.now()
+  username += randomNumber;
+
+  return username;
+}

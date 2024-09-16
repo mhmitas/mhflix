@@ -10,7 +10,7 @@ const HomeVideosSection = () => {
         async function fetchVideos() {
             try {
                 const res = await axios.get("/api/test")
-                console.log(res.data.data);
+                // console.log(res.data.data);
                 setVideos(res?.data?.data)
             } catch (error) {
                 console.error("video fetch error", error)

@@ -21,7 +21,7 @@ const HomeVideosSection = () => {
 
 
     return (
-        <section className='max-w-screen-2xl mx-auto w-full h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 flex-1 p-2 sm:p-4'>
+        <section className='max-w-screen-2xl mx-auto w-full h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 flex-1 root-padding'>
             {videos.map((video, index) => <VideoCard video={video} key={index} />)}
         </section>
     )

@@ -1,4 +1,3 @@
-'use client'
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import {
@@ -8,6 +7,7 @@ import {
     Clock,
     ThumbsUp,
     Menu,
+    ChevronRight,
 } from 'lucide-react'
 import {
     Sheet,
@@ -17,13 +17,16 @@ import {
     SheetTrigger,
 } from "@/components/ui/sheet"
 import Link from "next/link"
+import { auth } from "@/auth"
 
 
-export default function Sidebar() {
+export default async function Sidebar() {
+    const session = await auth()
+
     return (
         <>
             <div className="w-64 lg:block hidden overflow-y-auto fixed bg-background">
-                <SidebarContent />
+                <SidebarContent session={session} />
             </div>
             <div className="block lg:hidden z-50">
                 <Sheet key={'left'}>
@@ -46,7 +49,7 @@ export default function Sidebar() {
                             </SheetTitle>
                         </SheetHeader>
                         <div className="overflow-y-auto">
-                            <SidebarContent />
+                            <SidebarContent session={session} />
                         </div>
                     </SheetContent>
                 </Sheet>
@@ -56,7 +59,7 @@ export default function Sidebar() {
 }
 
 
-function SidebarContent() {
+function SidebarContent({ session }) {
     return (
         <div className="space-y-2 h-[calc(100vh-64px)] py-2 lg:p-0 w-full">
             <div className="p-2">
@@ -65,20 +68,23 @@ function SidebarContent() {
                     {navigationItems[0]?.items.map((item) => (
                         <Button key={item.label} variant="ghost" className="w-full text-base justify-start gap-2">
                             <span className="w-5 *:w-full">{item.icon}</span>
-                            <span className="font-normal">{item.label}</span>
+                            <span className="font-semibold">{item.label}</span>
                         </Button>
                     ))}
                 </div>
             </div>
             <Separator className="" />
             <div className="p-2 pb-16">
-                <h2 className="mb-2 px-4 text-lg font-semibold tracking-tight">Library</h2>
+                {session &&
+                    <Button asChild variant="ghost" className="w-full justify-start text-xl items-center space-x-2 mb-1">
+                        <Link href="/user-profile"><span>You</span>
+                            <ChevronRight className="size-5 mt-1" /></Link>
+                    </Button>}
                 <div className="space-y-1">
-
                     {navigationItems[1]?.items.map((item) => (
                         <Button key={item.label} variant="ghost" className="w-full text-base justify-start gap-3">
                             <span className="w-6 *:w-full">{item.icon}</span>
-                            <span className="font-normal">{item.label}</span>
+                            <span className="font-semibold">{item.label}</span>
                         </Button>
                     ))}
                 </div>

@@ -4,8 +4,8 @@ import React from 'react'
 
 const Home = async () => {
 
-    const session = await auth()
-    console.log('user data:', session?.user || session);
+    // const session = await auth()
+    // console.log('user data:', session?.user || session);
 
 
     return (

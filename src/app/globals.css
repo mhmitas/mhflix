@@ -74,7 +74,15 @@
     @apply max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8
   }
 
+  .root-padding {
+    @apply px-4 sm:px-6 lg:px-2
+  }
+
   .title-1 {
     @apply text-3xl font-bold tracking-tighter md:text-4xl text-center mb-4;
+  }
+
+  .input-filed {
+    @apply outline-offset-0 focus-visible:ring-0 focus-visible:ring-offset-0 px-5
   }
 }

@@ -1,0 +1,584 @@
+[
+    {
+        "_id": {
+            "$oid": "66a5063658be6203a3677ade"
+        },
+        "video": {
+            "asset_id": "ee3454d811551c0d9663434d86a4453b",
+            "public_id": "sxpoiut6pru5klxmbtrh",
+            "version": 1722091058,
+            "version_id": "94e713c2eea4020cb7421c7c7aca87ac",
+            "signature": "c6af7d64014988da5e7bc121f6fe3d7dadf64ccf",
+            "width": 640,
+            "height": 360,
+            "format": "mp4",
+            "resource_type": "video",
+            "created_at": "2024-07-27T14:37:38Z",
+            "tags": [],
+            "pages": 0,
+            "bytes": 1459309,
+            "type": "upload",
+            "etag": "06769e74b1ad6dc0d3b3a3df9ea5903a",
+            "placeholder": false,
+            "url": "http://res.cloudinary.com/dquqygs9h/video/upload/v1722091058/sxpoiut6pru5klxmbtrh.mp4",
+            "secure_url": "https://res.cloudinary.com/dquqygs9h/video/upload/v1722091058/sxpoiut6pru5klxmbtrh.mp4",
+            "playback_url": "https://res.cloudinary.com/dquqygs9h/video/upload/sp_auto/v1722091058/sxpoiut6pru5klxmbtrh.m3u8",
+            "asset_folder": "",
+            "display_name": "sxpoiut6pru5klxmbtrh",
+            "video": {
+                "pix_format": "yuv420p",
+                "codec": "h264",
+                "level": 31,
+                "profile": "High",
+                "bit_rate": "530842",
+                "time_base": "1/12800"
+            },
+            "frame_rate": 50,
+            "bit_rate": 534545,
+            "duration": 21.84,
+            "rotation": 0,
+            "original_filename": "12024392_640_360_50fps",
+            "api_key": "885459731211326"
+        },
+        "title": "Iure laborum Quia r",
+        "description": "Corrupti quisquam iCorrupti quisquam iCorrupti quisquam iCorrupti quisquam iCorrupti quisquam iCorrupti quisquam iCorrupti quisquam iCorrupti quisquam iCorrupti quisquam i",
+        "thumbnail": "https://res.cloudinary.com/dquqygs9h/image/upload/v1722091061/clllrvmvss15ireje1q3.webp",
+        "duration": "00:00:10",
+        "owner": {
+            "$oid": "66a317aced32f04b1eb90390"
+        },
+        "likes": 0,
+        "views": 0,
+        "createdAt": {
+            "$date": "2024-07-27T14:37:42.653Z"
+        },
+        "updatedAt": {
+            "$date": "2024-07-27T14:37:42.653Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66a5066c58be6203a3677ae2"
+        },
+        "video": {
+            "asset_id": "97439c26cb6febdf856f13aec6886213",
+            "public_id": "y8od6yq3y8tuyozwx7jr",
+            "version": 1722091110,
+            "version_id": "e81e1a831d29c8d04d5a4d4251711cca",
+            "signature": "b04db40be9ea25e300f9d82b1787bb2c1250f783",
+            "width": 960,
+            "height": 540,
+            "format": "mp4",
+            "resource_type": "video",
+            "created_at": "2024-07-27T14:38:30Z",
+            "tags": [],
+            "pages": 0,
+            "bytes": 20840415,
+            "type": "upload",
+            "etag": "c4400d33c4bfe0e7ab0ea651927402f9",
+            "placeholder": false,
+            "url": "http://res.cloudinary.com/dquqygs9h/video/upload/v1722091110/y8od6yq3y8tuyozwx7jr.mp4",
+            "secure_url": "https://res.cloudinary.com/dquqygs9h/video/upload/v1722091110/y8od6yq3y8tuyozwx7jr.mp4",
+            "playback_url": "https://res.cloudinary.com/dquqygs9h/video/upload/sp_auto/v1722091110/y8od6yq3y8tuyozwx7jr.m3u8",
+            "asset_folder": "",
+            "display_name": "y8od6yq3y8tuyozwx7jr",
+            "video": {
+                "pix_format": "yuv420p",
+                "codec": "h264",
+                "level": 40,
+                "profile": "High",
+                "bit_rate": "17298100",
+                "time_base": "1/15360"
+            },
+            "frame_rate": 120,
+            "bit_rate": 17306919,
+            "duration": 9.633333,
+            "rotation": 0,
+            "original_filename": "how-to-ride-cycle",
+            "api_key": "885459731211326"
+        },
+        "title": "Rerum dolor nemo mol",
+        "description": "Ad qui ut aut quis iAd qui ut aut quis iAd qui ut aut quis iAd qui ut aut quis iAd qui ut aut quis iAd qui ut aut quis i",
+        "thumbnail": "https://res.cloudinary.com/dquqygs9h/image/upload/v1722091114/bcsuceqc208ebxiklxqn.webp",
+        "duration": "00:00:10",
+        "owner": {
+            "$oid": "66a317aced32f04b1eb90390"
+        },
+        "likes": 0,
+        "views": 0,
+        "createdAt": {
+            "$date": "2024-07-27T14:38:36.261Z"
+        },
+        "updatedAt": {
+            "$date": "2024-07-27T14:38:36.261Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66a5120fb3b00f3ee4fb10f8"
+        },
+        "video": {
+            "asset_id": "351f65b84cf3ea92726607984af8a9a3",
+            "public_id": "v9nmk7xvf06tvphecdqd",
+            "version": 1722094091,
+            "version_id": "c4eb124507664b86a9fe68cf594ec93a",
+            "signature": "10c5f4f5ae589033a0d28e02a03618eef8937e31",
+            "width": 960,
+            "height": 400,
+            "format": "mp4",
+            "resource_type": "video",
+            "created_at": "2024-07-27T15:28:11Z",
+            "tags": [],
+            "pages": 0,
+            "bytes": 23014356,
+            "type": "upload",
+            "etag": "2125298091532905922013119cc3d2e9",
+            "placeholder": false,
+            "url": "http://res.cloudinary.com/dquqygs9h/video/upload/v1722094091/v9nmk7xvf06tvphecdqd.mp4",
+            "secure_url": "https://res.cloudinary.com/dquqygs9h/video/upload/v1722094091/v9nmk7xvf06tvphecdqd.mp4",
+            "playback_url": "https://res.cloudinary.com/dquqygs9h/video/upload/sp_auto/v1722094091/v9nmk7xvf06tvphecdqd.m3u8",
+            "asset_folder": "",
+            "display_name": "v9nmk7xvf06tvphecdqd",
+            "audio": {
+                "codec": "aac",
+                "bit_rate": "92926",
+                "frequency": 48000,
+                "channels": 2,
+                "channel_layout": "stereo"
+            },
+            "video": {
+                "pix_format": "yuv420p",
+                "codec": "h264",
+                "level": 30,
+                "profile": "Constrained Baseline",
+                "bit_rate": "3859635",
+                "dar": "12:5",
+                "time_base": "1/24000"
+            },
+            "is_audio": false,
+            "frame_rate": 23.976023976023978,
+            "bit_rate": 3949832,
+            "duration": 46.613333,
+            "rotation": 0,
+            "original_filename": "oceans",
+            "nb_frames": 1116,
+            "api_key": "885459731211326"
+        },
+        "title": "Beautifull Fises of atlantic ocean",
+        "description": "At lacinia vestibulum lobortis laoreet parturient, nibh augue lectus sociosqu viverra diam, nec lacus sociis neque. Vitae hendrerit felis lectus habitant egestas vivamus pharetra, augue parturient convallis nullam dignissim dis, arcu placerat eleifend leo praesent nam. Neque habitasse cum inceptos proin tincidunt id consequat et interdum",
+        "thumbnail": "https://res.cloudinary.com/dquqygs9h/image/upload/v1722094094/kh8s8i5yruqqhaffzle1.webp",
+        "duration": "00:00:15",
+        "owner": {
+            "$oid": "66a317aced32f04b1eb90390"
+        },
+        "likes": 0,
+        "views": 0,
+        "createdAt": {
+            "$date": "2024-07-27T15:28:15.610Z"
+        },
+        "updatedAt": {
+            "$date": "2024-07-27T15:28:15.610Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66a53565b3b00f3ee4fb121d"
+        },
+        "video": {
+            "asset_id": "1db1dd27a75daedefcd385820447c84f",
+            "public_id": "rjnsivk7uzgtqx1qaj7z",
+            "version": 1722103138,
+            "version_id": "290260819fa72eeab9be7facb85b7340",
+            "signature": "14fda94919a6dd2075c2eaa80aef4336c0688758",
+            "width": 1280,
+            "height": 720,
+            "format": "mp4",
+            "resource_type": "video",
+            "created_at": "2024-07-27T17:58:58Z",
+            "tags": [],
+            "pages": 0,
+            "bytes": 23291957,
+            "type": "upload",
+            "etag": "3f2c17edcdeced5c997b207a79950f08",
+            "placeholder": false,
+            "url": "http://res.cloudinary.com/dquqygs9h/video/upload/v1722103138/rjnsivk7uzgtqx1qaj7z.mp4",
+            "secure_url": "https://res.cloudinary.com/dquqygs9h/video/upload/v1722103138/rjnsivk7uzgtqx1qaj7z.mp4",
+            "playback_url": "https://res.cloudinary.com/dquqygs9h/video/upload/sp_auto/v1722103138/rjnsivk7uzgtqx1qaj7z.m3u8",
+            "asset_folder": "",
+            "display_name": "rjnsivk7uzgtqx1qaj7z",
+            "audio": {
+                "codec": "aac",
+                "bit_rate": "128007",
+                "frequency": 44100,
+                "channels": 2,
+                "channel_layout": "stereo"
+            },
+            "video": {
+                "pix_format": "yuv420p",
+                "codec": "h264",
+                "level": 31,
+                "profile": "Main",
+                "bit_rate": "581381",
+                "dar": "16:9",
+                "time_base": "1/12800"
+            },
+            "is_audio": false,
+            "frame_rate": 25,
+            "bit_rate": 715606,
+            "duration": 260.388571,
+            "rotation": 0,
+            "original_filename": "A Chameleons' Race Against Time - Earth's Tropical Islands - BBC Earth",
+            "nb_frames": 6508,
+            "api_key": "885459731211326"
+        },
+        "title": "Culpa quae nemo vel",
+        "description": "Quaerat iste aut bea Quaerat iste aut bea Quaerat iste aut bea Quaerat iste aut bea Quaerat iste aut bea Quaerat iste aut bea Quaerat iste aut bea Quaerat iste aut bea Quaerat iste aut bea Quaerat iste aut bea ",
+        "thumbnail": "https://res.cloudinary.com/dquqygs9h/image/upload/v1722103140/ctdimqbnhf2ti3io2gtw.jpg",
+        "duration": "00:04:10",
+        "owner": {
+            "$oid": "66a317aced32f04b1eb90390"
+        },
+        "likes": 0,
+        "views": 0,
+        "createdAt": {
+            "$date": "2024-07-27T17:59:01.987Z"
+        },
+        "updatedAt": {
+            "$date": "2024-07-27T17:59:01.987Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66a5370fbb2ebbcbd134efbc"
+        },
+        "video": {
+            "asset_id": "5421165ed213fe07a4fe9d5c138caec2",
+            "public_id": "asvumpghdt92mxgo5uoo",
+            "version": 1722103563,
+            "version_id": "656e96c8dac546bbb26334e516cbadeb",
+            "signature": "84747f4432627c38926b571c7c500a6b26d77454",
+            "width": 1280,
+            "height": 720,
+            "format": "mp4",
+            "resource_type": "video",
+            "created_at": "2024-07-27T18:06:03Z",
+            "tags": [],
+            "pages": 0,
+            "bytes": 12252782,
+            "type": "upload",
+            "etag": "36537e02b0b6b6f99fdbe0ce635c67f9",
+            "placeholder": false,
+            "url": "http://res.cloudinary.com/dquqygs9h/video/upload/v1722103563/asvumpghdt92mxgo5uoo.mp4",
+            "secure_url": "https://res.cloudinary.com/dquqygs9h/video/upload/v1722103563/asvumpghdt92mxgo5uoo.mp4",
+            "playback_url": "https://res.cloudinary.com/dquqygs9h/video/upload/sp_auto/v1722103563/asvumpghdt92mxgo5uoo.m3u8",
+            "asset_folder": "",
+            "display_name": "asvumpghdt92mxgo5uoo",
+            "audio": {
+                "codec": "aac",
+                "bit_rate": "127999",
+                "frequency": 44100,
+                "channels": 2,
+                "channel_layout": "stereo"
+            },
+            "video": {
+                "pix_format": "yuv420p",
+                "codec": "h264",
+                "level": 31,
+                "profile": "Main",
+                "bit_rate": "524887",
+                "dar": "16:9",
+                "time_base": "1/12800"
+            },
+            "is_audio": false,
+            "frame_rate": 25,
+            "bit_rate": 658986,
+            "duration": 148.747029,
+            "rotation": 0,
+            "original_filename": "Singing NIGHTINGALE - the best BIRD SONG",
+            "nb_frames": 3716,
+            "api_key": "885459731211326"
+        },
+        "title": "Vero deleniti aliqua",
+        "description": "Molestias quo quaera .Molestias quo quaera .Molestias quo quaera .Molestias quo quaera .Molestias quo quaera .Molestias quo quaera .Molestias quo quaera .Molestias quo quaera .Molestias quo quaera .Molestias quo quaera .Molestias quo quaera .Molestias quo quaera .Molestias quo quaera .",
+        "thumbnail": "https://res.cloudinary.com/dquqygs9h/image/upload/v1722103565/enip5ljfzcvaqzdgkqdf.jpg",
+        "duration": "00:00:10",
+        "owner": {
+            "$oid": "66a317aced32f04b1eb90390"
+        },
+        "likes": 0,
+        "views": 0,
+        "createdAt": {
+            "$date": "2024-07-27T18:06:07.065Z"
+        },
+        "updatedAt": {
+            "$date": "2024-07-27T18:06:07.065Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66a53835bb2ebbcbd134efce"
+        },
+        "video": {
+            "asset_id": "cf574ce0f994ae7d5a71958c1e21c764",
+            "public_id": "ihmr3myawxadokjebrqd",
+            "version": 1722103856,
+            "version_id": "27e763073da1b397b864ce8e4786ab5b",
+            "signature": "9c7089f8d74e28c63dcdea614004e540c7b61d2e",
+            "width": 1280,
+            "height": 720,
+            "format": "mp4",
+            "resource_type": "video",
+            "created_at": "2024-07-27T18:10:56Z",
+            "tags": [],
+            "pages": 0,
+            "bytes": 21972861,
+            "type": "upload",
+            "etag": "a87dd97a1f2c9fc644684c0bb6e5cef1",
+            "placeholder": false,
+            "url": "http://res.cloudinary.com/dquqygs9h/video/upload/v1722103856/ihmr3myawxadokjebrqd.mp4",
+            "secure_url": "https://res.cloudinary.com/dquqygs9h/video/upload/v1722103856/ihmr3myawxadokjebrqd.mp4",
+            "playback_url": "https://res.cloudinary.com/dquqygs9h/video/upload/sp_auto/v1722103856/ihmr3myawxadokjebrqd.m3u8",
+            "asset_folder": "",
+            "display_name": "ihmr3myawxadokjebrqd",
+            "audio": {
+                "codec": "aac",
+                "bit_rate": "128010",
+                "frequency": 44100,
+                "channels": 2,
+                "channel_layout": "stereo"
+            },
+            "video": {
+                "pix_format": "yuv420p",
+                "codec": "h264",
+                "level": 31,
+                "profile": "Main",
+                "bit_rate": "441259",
+                "dar": "16:9",
+                "time_base": "1/12800"
+            },
+            "is_audio": false,
+            "frame_rate": 25,
+            "bit_rate": 575559,
+            "duration": 305.412063,
+            "rotation": 0,
+            "original_filename": "KUNG FU PANDA 2 Clip - 'Final Fight With Shen' (2011)",
+            "nb_frames": 7634,
+            "api_key": "885459731211326"
+        },
+        "title": "KungFu Panda",
+        "description": "Kung Fu Panda is the greatest movie ever made.Kung Fu Panda is the greatest movie ever made.Kung Fu Panda is the greatest movie ever made.Kung Fu Panda is the greatest movie ever made.Kung Fu Panda is the greatest movie ever made.Kung Fu Panda is the greatest movie ever made.Kung Fu Panda is the greatest movie ever made.",
+        "thumbnail": "https://res.cloudinary.com/dquqygs9h/image/upload/v1722103859/juvfgaox1kbi786fant0.jpg",
+        "duration": "00:05:05",
+        "owner": {
+            "$oid": "66a317aced32f04b1eb90390"
+        },
+        "likes": 0,
+        "views": 0,
+        "createdAt": {
+            "$date": "2024-07-27T18:11:01.566Z"
+        },
+        "updatedAt": {
+            "$date": "2024-07-27T18:11:01.566Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66a5d82f8772a4789cc7bbb1"
+        },
+        "video": {
+            "asset_id": "bebb6ec80fde21ddb89a30a168051787",
+            "public_id": "uqtmhr8sb2yfvs0ky5yx",
+            "version": 1722144809,
+            "version_id": "4a535f30b955eaf0143a7677a8a98002",
+            "signature": "78f3c250b048e9a20c5a789941059bb243a47d39",
+            "width": 1280,
+            "height": 720,
+            "format": "mp4",
+            "resource_type": "video",
+            "created_at": "2024-07-28T05:33:29Z",
+            "tags": [],
+            "pages": 0,
+            "bytes": 94664614,
+            "type": "upload",
+            "etag": "61a384c20798724482cef08d2de0cede",
+            "placeholder": false,
+            "url": "http://res.cloudinary.com/dquqygs9h/video/upload/v1722144809/uqtmhr8sb2yfvs0ky5yx.mp4",
+            "secure_url": "https://res.cloudinary.com/dquqygs9h/video/upload/v1722144809/uqtmhr8sb2yfvs0ky5yx.mp4",
+            "playback_url": "https://res.cloudinary.com/dquqygs9h/video/upload/sp_auto/v1722144809/uqtmhr8sb2yfvs0ky5yx.m3u8",
+            "asset_folder": "",
+            "display_name": "uqtmhr8sb2yfvs0ky5yx",
+            "audio": {
+                "codec": "aac",
+                "bit_rate": "128010",
+                "frequency": 44100,
+                "channels": 2,
+                "channel_layout": "stereo"
+            },
+            "video": {
+                "pix_format": "yuv420p",
+                "codec": "h264",
+                "level": 32,
+                "profile": "Main",
+                "bit_rate": "2689983",
+                "dar": "16:9",
+                "time_base": "1/60000"
+            },
+            "is_audio": false,
+            "frame_rate": 59.94005994005994,
+            "bit_rate": 2829682,
+            "duration": 267.633197,
+            "rotation": 0,
+            "original_filename": "Alaska in 8K 60p HDR  (Dolby Vision)",
+            "nb_frames": 16039,
+            "api_key": "885459731211326"
+        },
+        "title": "Alaska | To the lover of wilderness, Alaska is one of the most wonderful countries in the world. ",
+        "description": "Porta justo turpis mauris dictumst eleifend ligula nibh feugiat quis lacus, egestas fusce suscipit vulputate sociis dignissim iaculis congue integer cursus pulvinar, luctus facilisis natoque ornare mus ridiculus duis nam elementum. Ultricies porttitor ante ut sociis fermentum platea cursus vestibulum nulla eleifend vivamus, conubia dapibus nisl praesent quam dui diam in nibh. Posuere primis venenatis pretium dictum euismod quam maecenas integer auctor eleifend ut congue class convallis, senectus est habitant inceptos suscipit tincidunt cum nam vulputate interdum lacus himenaeos eu, porta proin potenti morbi felis volutpat massa odio commodo fusce montes mollis egestas.",
+        "thumbnail": "https://res.cloudinary.com/dquqygs9h/image/upload/v1722144813/uxe6ucyp1errshdj2ptr.webp",
+        "duration": "00:04:28",
+        "owner": {
+            "$oid": "66a317aced32f04b1eb90390"
+        },
+        "likes": 0,
+        "views": 0,
+        "createdAt": {
+            "$date": "2024-07-28T05:33:35.647Z"
+        },
+        "updatedAt": {
+            "$date": "2024-08-08T01:44:53.889Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66a5fd48fc33d7d45f9edb9c"
+        },
+        "video": {
+            "asset_id": "a56b36b6af0b7f746e7fbabf9835fc3e",
+            "public_id": "euvwob03puzijytdv13g",
+            "version": 1722154306,
+            "version_id": "1ef2a47e284d696f5216e2901af80617",
+            "signature": "f2fab6d5763859fb26b7dff301869386cd3066fd",
+            "width": 960,
+            "height": 540,
+            "format": "mp4",
+            "resource_type": "video",
+            "created_at": "2024-07-28T08:11:46Z",
+            "tags": [],
+            "pages": 0,
+            "bytes": 16189117,
+            "type": "upload",
+            "etag": "ecba6b27216d1a6e8234ea252465a6af",
+            "placeholder": false,
+            "url": "http://res.cloudinary.com/dpzythyoi/video/upload/v1722154306/euvwob03puzijytdv13g.mp4",
+            "secure_url": "https://res.cloudinary.com/dpzythyoi/video/upload/v1722154306/euvwob03puzijytdv13g.mp4",
+            "playback_url": "https://res.cloudinary.com/dpzythyoi/video/upload/sp_auto/v1722154306/euvwob03puzijytdv13g.m3u8",
+            "asset_folder": "",
+            "display_name": "euvwob03puzijytdv13g",
+            "video": {
+                "pix_format": "yuv420p",
+                "codec": "h264",
+                "level": 31,
+                "profile": "High",
+                "bit_rate": "7519837",
+                "dar": "16:9",
+                "time_base": "1/30000"
+            },
+            "frame_rate": 29.97002997002997,
+            "bit_rate": 7522299,
+            "duration": 17.2172,
+            "rotation": 0,
+            "original_filename": "12049416_960_540_30fps",
+            "api_key": "385919312376673"
+        },
+        "title": "Beautifull Floating Geese on a Lake",
+        "description": "The lake sprawls out like a shimmering jewel amidst the surrounding landscape, its surface reflecting the sky above—an endless expanse of azure dotted with fluffy white clouds. The water is crystal clear, allowing you to glimpse the smooth stones and the delicate water plants swaying gently with the current below.\r\n\r\nFringed by lush greenery, tall trees lean towards the water, their leaves whispering secrets in the gentle breeze. In some areas, vibrant wildflowers bloom along the shore, their colors vibrant against the backdrop of deep greens and earthy browns.\r\n\r\nAs the sun begins to set, the whole scene transforms into a masterpiece; the sky is painted in shades of orange, pink, and purple, casting a warm glow over the lake. The reflections in the water create an enchanting symmetry, and the air is filled with the soothing sounds of nature—birds chirping, the rustle of leaves, and the soft lapping of water against the shore.\r\n\r\nIn the distance, a pair of swans glide gracefully across the surface, adding an elegant touch to this already mesmerizing vista. It’s a place that invites serenity, reflection, and a deep appreciation for the beauty of nature.",
+        "thumbnail": "https://res.cloudinary.com/dpzythyoi/image/upload/v1723083769/a0puc48usfgxvgnxqel4.png",
+        "duration": "00:00:19",
+        "owner": {
+            "$oid": "66a317aced32f04b1eb90390"
+        },
+        "likes": 0,
+        "views": 0,
+        "createdAt": {
+            "$date": "2024-07-28T08:11:52.601Z"
+        },
+        "updatedAt": {
+            "$date": "2024-08-08T02:42:51.390Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66aa10f663d98a1bb183e213"
+        },
+        "video": {
+            "asset_id": "9a53eba99e8a908c453f354bdad6dc9e",
+            "public_id": "m9oqa9gtmpjoxybrtqi9",
+            "version": 1722421491,
+            "version_id": "3c626bc4f9c9df2244a24f253204343d",
+            "signature": "bb22783464c1ce5e9304c0313bf7ef98865087d4",
+            "width": 640,
+            "height": 360,
+            "format": "mp4",
+            "resource_type": "video",
+            "created_at": "2024-07-31T10:24:51Z",
+            "tags": [],
+            "pages": 0,
+            "bytes": 10031074,
+            "type": "upload",
+            "etag": "3bd946884571eaa7ae7222382ca4e0d0",
+            "placeholder": false,
+            "url": "http://res.cloudinary.com/dpzythyoi/video/upload/v1722421491/m9oqa9gtmpjoxybrtqi9.mp4",
+            "secure_url": "https://res.cloudinary.com/dpzythyoi/video/upload/v1722421491/m9oqa9gtmpjoxybrtqi9.mp4",
+            "playback_url": "https://res.cloudinary.com/dpzythyoi/video/upload/sp_auto/v1722421491/m9oqa9gtmpjoxybrtqi9.m3u8",
+            "asset_folder": "",
+            "display_name": "m9oqa9gtmpjoxybrtqi9",
+            "audio": {
+                "codec": "aac",
+                "bit_rate": "128014",
+                "frequency": 44100,
+                "channels": 2,
+                "channel_layout": "stereo"
+            },
+            "video": {
+                "pix_format": "yuv420p",
+                "codec": "h264",
+                "level": 30,
+                "profile": "Main",
+                "bit_rate": "303301",
+                "dar": "16:9",
+                "time_base": "1/24000"
+            },
+            "is_audio": false,
+            "frame_rate": 23.976023976023978,
+            "bit_rate": 435102,
+            "duration": 184.4361,
+            "rotation": 0,
+            "original_filename": "INK DROPS 4K (ULTRA HD)",
+            "nb_frames": 4422,
+            "api_key": "385919312376673"
+        },
+        "title": "Colors quis facilisi ullamcorper lectus pulvinar elementum dignissim dictum fusce velit",
+        "description": "Parturient arcu aenean faucibus feugiat nascetur laoreet euismod sed sociis, congue sapien nisl donec vestibulum blandit vehicula integer, massa urna taciti nec neque nisi ultrices consequat.\r\n\r\nArcu etiam ullamcorper quis a risus molestie integer, fusce massa auctor montes ornare per mus dictumst, sed leo justo posuere varius felis. Mollis tristique turpis nam parturient nisi velit ornare nostra potenti porttitor, rutrum rhoncus duis ullamcorper pulvinar ante mauris netus. Eros convallis fusce sed erat hac hendrerit blandit nullam nam dapibus posuere gravida platea, suscipit tristique consequat metus aptent class mi pulvinar lectus massa montes maecenas. Magnis nunc eleifend porttitor suspendisse gravida mus taciti egestas curae, varius dictum rutrum donec etiam imperdiet tincidunt ac tempus, congue mollis aenean himenaeos vestibulum cubilia fusce fames.",
+        "thumbnail": "https://res.cloudinary.com/dpzythyoi/image/upload/v1722421493/oh5quymentih3q7uigfn.webp",
+        "duration": "00:30:04",
+        "owner": {
+            "$oid": "66a761d43ee48d9d62a34206"
+        },
+        "views": 0,
+        "createdAt": {
+            "$date": "2024-07-31T10:24:54.533Z"
+        },
+        "updatedAt": {
+            "$date": "2024-07-31T10:24:54.533Z"
+        },
+        "__v": 0
+    }
+]

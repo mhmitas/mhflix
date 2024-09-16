@@ -15,7 +15,7 @@ const SearchBar = () => {
                     <Input
                         type="search"
                         placeholder="Search"
-                        className="w-full rounded-full rounded-r-none outline-offset-0 focus-visible:ring-0 focus-visible:ring-offset-0"
+                        className="w-full rounded-full rounded-r-none outline-offset-0 focus-visible:ring-0 focus-visible:ring-offset-0 px-5"
                     />
                 </div>
                 <Button variant="outline" className="inline-flex border-l-0 rounded-l-none rounded-r-full">
@@ -39,7 +39,7 @@ const SearchBar = () => {
                                     <Input
                                         type="search"
                                         placeholder="Search"
-                                        className="w-full rounded-full rounded-r-none"
+                                        className="w-full rounded-full rounded-r-none outline-offset-0 focus-visible:ring-0 focus-visible:ring-offset-0 px-5"
                                     />
                                 </div>
                                 <Button variant="outline" className="inline-flex border-l-0 rounded-l-none rounded-r-full">

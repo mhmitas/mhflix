@@ -22,7 +22,7 @@ import Link from "next/link"
 export default function Sidebar() {
     return (
         <>
-            <div className="w-64 mt-16 md:block hidden overflow-y-auto">
+            <div className="w-64 mt-16 md:block hidden overflow-y-auto fixed bg-background">
                 <SidebarContent />
             </div>
             <div className="block md:hidden z-50">
@@ -40,7 +40,7 @@ export default function Sidebar() {
                         <SheetHeader>
                             <SheetTitle>
                                 <Link href="/" className="flex items-center py-4 px-6 pb-2">
-                                    <img className='w-9' src="/logo.svg" alt='img' />
+                                    <img className='w-8' src="/logo.svg" alt='img' />
                                     <span className="ml-2 text-2xl font-semibold">MhFlix</span>
                                 </Link>
                             </SheetTitle>

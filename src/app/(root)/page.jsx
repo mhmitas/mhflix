@@ -1,10 +1,10 @@
+import HomeVideosSection from '@/components/sections/HomeVideosSection'
 import React from 'react'
 
-const Home = () => {
+const Home = async () => {
     return (
-        <div>
-            {/* <img src="/public/logo.svg" alt="" /> */}
-            <img src="/mail.png" alt="" />
+        <div className=''>
+            <HomeVideosSection />
         </div>
     )
 }

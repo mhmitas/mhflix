@@ -15,7 +15,7 @@ export const Navbar = () => {
                     <div className="flex items-center">
                         <div className='md:hidden block'><Sidebar /></div>
                         <Link href="/" className="flex items-center">
-                            <img className='w-9' src="/logo.svg" alt='img' />
+                            <img className='w-8' src="/logo.svg" alt='img' />
                             <span className="ml-2 text-2xl font-semibold">MhFlix</span>
                         </Link>
                     </div>

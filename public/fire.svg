@@ -1,0 +1,16 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- {/* Main fire shape */} -->
+      <path d="M100 0C100 0 130 60 130 120C130 180 100 200 100 200C100 200 70 180 70 120C70 60 100 0 100 0Z" fill="#FF9800" />
+      
+      <!-- {/* Left flame */} -->
+      <path d="M60 40C60 40 80 80 80 130C80 180 60 195 60 195C60 195 40 180 40 130C40 80 60 40 60 40Z" fill="#FF5722" />
+      
+      <!-- {/* Right flame */} -->
+      <path d="M140 40C140 40 160 80 160 130C160 180 140 195 140 195C140 195 120 180 120 130C120 80 140 40 140 40Z" fill="#FF5722" />
+      
+      <!-- {/* Center highlight */} -->
+      <path d="M100 20C100 20 115 70 115 120C115 170 100 190 100 190C100 190 85 170 85 120C85 70 100 20 100 20Z" fill="#FFC107" />
+      
+      <!-- {/* Larger, perfect triangle play icon */} -->
+      <!-- <path d="M70 55L150 100L70 145Z" fill="#FFFFFF" /> -->
+    </svg>

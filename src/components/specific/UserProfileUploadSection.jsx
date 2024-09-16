@@ -1,11 +1,13 @@
 import React from 'react'
 import { Button } from '../ui/button'
+import UploadVideo from '../modals/UploadVideo'
+import VideoUploader from '../modals/VideoUploader'
 
 const UserProfileUploadSection = () => {
     return (
         <section>
             <div className='space-x-4'>
-                <Button size="lg">Upload Video</Button>
+                <VideoUploader />
                 <Button size="lg">Create Post</Button>
             </div>
         </section>

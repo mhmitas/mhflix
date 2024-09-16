@@ -14,7 +14,7 @@ import { Input } from '../ui/input'
 
 const UpdateUserProfile = () => {
     return (
-        <Dialog>
+        <Dialog className="">
             <DialogTrigger asChild>
                 <Button size="icon" variant="outline" className="flex items-center space-x-2">
                     <Edit className="h-4 w-4" />

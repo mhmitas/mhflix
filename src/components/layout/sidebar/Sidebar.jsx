@@ -7,8 +7,8 @@ import {
     Clock,
     ThumbsUp,
     Menu,
-    ChevronRight,
 } from 'lucide-react'
+import { GoVideo } from "react-icons/go";
 import {
     Sheet,
     SheetContent,
@@ -75,16 +75,16 @@ function SidebarContent({ session }) {
             </div>
             <Separator className="" />
             <div className="p-2 pb-16">
-                {session &&
-                    <Button asChild variant="ghost" className="w-full justify-start text-xl items-center space-x-2 mb-1">
-                        <Link href="/user-profile"><span>You</span>
-                            <ChevronRight className="size-5 mt-1" /></Link>
-                    </Button>}
                 <div className="space-y-1">
+                    {session &&
+                        <Button asChild variant="ghost" className="w-full text-base justify-start gap-3">
+                            <Link href="/user-profile"><span className="w-6 *:w-full"><GoVideo className="text-2xl" /></span>
+                                <span className="font-semibold">Your Channel</span></Link>
+                        </Button>}
                     {navigationItems[1]?.items.map((item) => (
-                        <Button key={item.label} variant="ghost" className="w-full text-base justify-start gap-3">
-                            <span className="w-6 *:w-full">{item.icon}</span>
-                            <span className="font-semibold">{item.label}</span>
+                        <Button asChild key={item.label} variant="ghost" className="w-full text-base justify-start gap-3">
+                            <Link href="/"><span className="w-6 *:w-full">{item.icon}</span>
+                                <span className="font-semibold">{item.label}</span></Link>
                         </Button>
                     ))}
                 </div>
@@ -107,7 +107,6 @@ const navigationItems = [
         title: 'Library',
         items: [
             { icon: <Clock />, label: 'History' },
-            { icon: <PlaySquare />, label: 'Your videos' },
             { icon: <ThumbsUp />, label: 'Liked videos' },
         ],
     },

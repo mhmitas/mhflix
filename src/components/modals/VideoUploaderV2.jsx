@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button } from '../ui/button'
 import { ImageIcon, Loader2, Upload, X } from 'lucide-react'
 import { useDropzone } from 'react-dropzone'
@@ -33,7 +33,6 @@ const VideoUploaderV2 = ({ session }) => {
 
     async function handleSubmit(e) {
         e.preventDefault();
-        setProcessing(true)
         const form = e.target;
         const title = form.title.value;
         const description = form.description.value;
@@ -50,7 +49,6 @@ const VideoUploaderV2 = ({ session }) => {
         if (thumbnail.size > (0.5 * 1000000)) {
             return toast.error("Max thumbnail size 500 KB allowed")
         }
-
         const formData = new FormData();
         formData.append('title', title);
         formData.append('description', description);
@@ -58,7 +56,8 @@ const VideoUploaderV2 = ({ session }) => {
         formData.append('thumbnail', thumbnail);
         formData.append('video', video);
         try {
-            const res = await axios.post("/api/test", formData)
+            setProcessing(true)
+            const res = await axios.post("/api/upload-video", formData)
             console.log(res.data);
             if (res.status === 200) {
                 toast.success("Video uploaded successfully")
@@ -86,7 +85,7 @@ const VideoUploaderV2 = ({ session }) => {
                     <div className='max-w-xl md:max-w-4xl w-[95%] max-h-[90vh] sm: overflow-y-auto rounded-lg bg-background text-foreground sm:p-4 p-2'>
                         <div className='flex justify-between items-center '>
                             <h3 className='text-xl font-semibold p-2'>Upload Video</h3>
-                            <button onClick={() => setIsOpen(false)}>
+                            <button disabled={processing} onClick={() => setIsOpen(false)}>
                                 <X className='w-6' />
                             </button>
                         </div>
@@ -133,6 +132,7 @@ const VideoUploaderV2 = ({ session }) => {
                                 <Textarea name="description" required className="text-base min-h-32 focus-visible:ring-primary/50 bg-muted" maxLength={1500} />
                             </div>
                             {errorMessage && <p className='text-destructive'>{errorMessage}</p>}
+                            {processing && <p className='text-base text-green-600'>Please wait while we are uploading your video. And don't Reload this page.</p>}
                             <div className="text-center mt-4">
                                 <Button disabled={processing} type="submit" className="text-base">
                                     {processing ?

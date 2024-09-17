@@ -6,6 +6,7 @@ import { useDropzone } from 'react-dropzone'
 import { Textarea } from '../ui/textarea'
 import axios from 'axios'
 import toast from 'react-hot-toast'
+import { Input } from '../ui/input'
 
 const VideoUploaderV2 = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -35,6 +36,7 @@ const VideoUploaderV2 = () => {
         const form = e.target;
         const title = form.title.value;
         const description = form.description.value;
+        const duration = form.duration.value;
         const thumbnail = thumbnailFile;
         const video = videoFile;
 
@@ -45,12 +47,13 @@ const VideoUploaderV2 = () => {
             return toast.error("Max video size 15 MB allowed")
         }
         if (thumbnail.size > (0.5 * 1000000)) {
-            return toast.error("Max thumbnail size 0.5 MB allowed")
+            return toast.error("Max thumbnail size 500 KB allowed")
         }
 
         const formData = new FormData();
         formData.append('title', title);
         formData.append('description', description);
+        formData.append('duration', duration);
         formData.append('thumbnail', thumbnail);
         formData.append('video', video);
         try {
@@ -85,9 +88,10 @@ const VideoUploaderV2 = () => {
                                         </div>
                                             <p className='line-clamp-2 text-sm mt-1'>{videoFile?.name}</p></>
                                         :
-                                        <div className="flex flex-col items-center justify-center aspect-video border-2 border-dashed cursor-pointer hover:bg-muted/50 rounded-lg">
+                                        <div className="flex flex-col items-center justify-center aspect-video border-2 border-dashed cursor-pointer hover:bg-muted bg-muted/50 rounded-lg">
                                             <Upload className="w-12 h-12 text-muted-foreground" />
-                                            <p className="mt-2 text-sm text-muted-foreground">Click or drag video to upload</p>
+                                            <p className="">Click or drag video to upload</p>
+                                            <p className='text-xs text-muted-foreground'>Max size 15 MB</p>
                                         </div>
                                     }
                                 </div>
@@ -99,9 +103,10 @@ const VideoUploaderV2 = () => {
                                             <img src={thumbnailUrl} alt="thumbnail" />
                                         </div>
                                         :
-                                        <div className="flex flex-col items-center justify-center aspect-video border-2 border-dashed cursor-pointer hover:bg-muted/50 rounded-lg">
+                                        <div className="flex flex-col items-center justify-center aspect-video border-2 border-dashed cursor-pointer hover:bg-muted bg-muted/50 rounded-lg">
                                             <ImageIcon className="w-8 h-8 text-muted-foreground" />
                                             <p className="mt-2 text-sm text-muted-foreground">Upload thumbnail</p>
+                                            <p className='text-xs text-muted-foreground'>Max size 500 KB</p>
                                         </div>
                                     }
                                 </div>
@@ -109,11 +114,15 @@ const VideoUploaderV2 = () => {
 
                             <div>
                                 <label className="block text-sm font-medium  py-1">Title</label>
-                                <Textarea name="title" required className="font-normal text-base focus-visible:ring-primary/50 bg-muted" />
+                                <Textarea name="title" required className="font-normal text-base focus-visible:ring-primary/50 bg-muted" maxlength={150} />
                             </div>
                             <div>
                                 <label className="block text-sm font-medium  py-1">Description</label>
-                                <Textarea name="description" required className="text-base min-h-32 focus-visible:ring-primary/50 bg-muted" />
+                                <Textarea name="description" required className="text-base min-h-32 focus-visible:ring-primary/50 bg-muted" maxlength={1500} />
+                            </div>
+                            <div>
+                                <label className="block text-sm font-medium  py-1">Duration</label>
+                                <Input name="duration" required placeholder="01:30:00" className="text-base focus-visible:ring-primary/50 bg-muted w-max" />
                             </div>
                             {errorMessage && <p className='text-destructive'>{errorMessage}</p>}
                             <div className="text-center mt-4">

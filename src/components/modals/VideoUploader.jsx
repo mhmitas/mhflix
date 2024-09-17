@@ -10,20 +10,24 @@ import toast from 'react-hot-toast';
 
 const VideoUploader = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [videoUrl, setVideoUrl] = useState(null)
     const [videoFile, setVideoFile] = useState(null)
     const [thumbnailFile, setThumbnailFile] = useState(null)
+    const [thumbnailUrl, setThumbnailUrl] = useState(null)
     const [errorMessage, setErrorMessage] = useState('')
 
     const { getRootProps: getVideoRootProps, getInputProps: getVideoInputProps } = useDropzone({
         accept: { 'video/*': [] },
         onDrop: acceptedFiles => {
             setVideoFile(acceptedFiles[0]);
+            setVideoUrl(URL.createObjectURL(acceptedFiles[0]))
         }
     });
     const { getRootProps: getThumbnailRootProps, getInputProps: getThumbnailInputProps } = useDropzone({
         accept: { 'image/*': [] },
         onDrop: acceptedFiles => {
             setThumbnailFile(acceptedFiles[0]);
+            setThumbnailUrl(URL.createObjectURL(acceptedFiles[0]))
         }
     });
 
@@ -57,39 +61,41 @@ const VideoUploader = () => {
         <>
             <Button onClick={() => setIsOpen(true)} size="lg">Upload Video</Button>
             <Dialog open={isOpen} onOpenChange={setIsOpen}>
-                <DialogContent onInteractOutside={(event) => event.preventDefault()} className="max-w-xl w-[95%] max-h-[90vh] sm: overflow-y-auto rounded-lg" >
+                <DialogContent onInteractOutside={(event) => event.preventDefault()} className="max-w-xl md:max-w-4xl w-[95%] max-h-[90vh] sm: overflow-y-auto rounded-lg" >
                     <DialogHeader>
                         <DialogTitle>Upload Video</DialogTitle>
                         <DialogDescription></DialogDescription>
                     </DialogHeader>
                     <form onSubmit={handleSubmit} className="space-y-4">
-                        <div {...getVideoRootProps({ className: 'dropzone' })}>
-                            <input {...getVideoInputProps()} name="video" type='file' />
-                            {videoFile ?
-                                <><div className='rounded-lg overflow-hidden *:w-full'>
-                                    <video controls src={URL.createObjectURL(videoFile)} />
-                                </div>
-                                    <p className='line-clamp-2 text-sm'>{videoFile?.name}</p></>
-                                :
-                                <div className="flex flex-col items-center justify-center aspect-video border-2 border-dashed cursor-pointer hover:bg-muted/50 rounded-lg">
-                                    <Upload className="w-12 h-12 text-muted-foreground" />
-                                    <p className="mt-2 text-sm text-muted-foreground">Click or drag video to upload</p>
-                                </div>
-                            }
-                        </div>
+                        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                            <div {...getVideoRootProps({ className: 'dropzone' })}>
+                                <input {...getVideoInputProps()} name="video" type='file' />
+                                {videoUrl ?
+                                    <><div className='rounded-lg overflow-hidden *:w-full border'>
+                                        <video width={300} height={200} controls src={videoUrl} />
+                                    </div>
+                                        <p className='line-clamp-2 text-sm mt-1'>{videoFile?.name}</p></>
+                                    :
+                                    <div className="flex flex-col items-center justify-center aspect-video border-2 border-dashed cursor-pointer hover:bg-muted/50 rounded-lg">
+                                        <Upload className="w-12 h-12 text-muted-foreground" />
+                                        <p className="mt-2 text-sm text-muted-foreground">Click or drag video to upload</p>
+                                    </div>
+                                }
+                            </div>
 
-                        <div {...getThumbnailRootProps({ className: 'dropzone' })}>
-                            <input {...getThumbnailInputProps()} type="file" name="thumbnail" />
-                            {thumbnailFile ?
-                                <div className='rounded-lg overflow-hidden *:w-full aspect-video flex items-center justify-center'>
-                                    <img src={URL.createObjectURL(thumbnailFile)} alt="thumbnail" />
-                                </div>
-                                :
-                                <div className="flex flex-col items-center justify-center aspect-video border-2 border-dashed cursor-pointer hover:bg-muted/50 rounded-lg">
-                                    <ImageIcon className="w-8 h-8 text-muted-foreground" />
-                                    <p className="mt-2 text-sm text-muted-foreground">Upload thumbnail</p>
-                                </div>
-                            }
+                            <div {...getThumbnailRootProps({ className: 'dropzone' })} className='h-max'>
+                                <input {...getThumbnailInputProps()} type="file" name="thumbnail" />
+                                {thumbnailUrl ?
+                                    <div className='rounded-lg overflow-hidden *:w-full aspect-video flex items-center justify-center'>
+                                        <img src={thumbnailUrl} alt="thumbnail" />
+                                    </div>
+                                    :
+                                    <div className="flex flex-col items-center justify-center aspect-video border-2 border-dashed cursor-pointer hover:bg-muted/50 rounded-lg">
+                                        <ImageIcon className="w-8 h-8 text-muted-foreground" />
+                                        <p className="mt-2 text-sm text-muted-foreground">Upload thumbnail</p>
+                                    </div>
+                                }
+                            </div>
                         </div>
 
                         <div>

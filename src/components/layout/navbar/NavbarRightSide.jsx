@@ -11,7 +11,7 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { MoonIcon } from '@radix-ui/react-icons'
-
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 export const NavbarRightSide = async () => {
 
@@ -52,8 +52,11 @@ function ProfileDropdownMenu({ user }) {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="icon" className="rounded-full">
-                    <img className='w-full rounded-full' src={user?.image} alt="" />
+                <Button variant="ghost" size="icon" className="rounded-full focus-visible:ring-0">
+                    <Avatar>
+                        <AvatarImage src={user?.image} />
+                        <AvatarFallback className="bg-gradient-to-t from-rose-100 to-blue-100">{user?.name?.trim()?.charAt(0)}</AvatarFallback>
+                    </Avatar>
                     <span className="sr-only">Profile</span>
                 </Button>
             </DropdownMenuTrigger>

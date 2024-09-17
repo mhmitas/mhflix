@@ -4,6 +4,8 @@ import { Button } from '../ui/button'
 import { ImageIcon, Upload, X } from 'lucide-react'
 import { useDropzone } from 'react-dropzone'
 import { Textarea } from '../ui/textarea'
+import axios from 'axios'
+import toast from 'react-hot-toast'
 
 const VideoUploaderV2 = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -35,10 +37,17 @@ const VideoUploaderV2 = () => {
         const description = form.description.value;
         const thumbnail = thumbnailFile;
         const video = videoFile;
-        // console.log({ title, description, thumbnail, video });
+
         if (!thumbnail || !video) {
             return toast.error("Video and Thumbnail is required")
         }
+        if (video.size > (15 * 1000000)) {
+            return toast.error("Max video size 15 MB allowed")
+        }
+        if (thumbnail.size > (0.5 * 1000000)) {
+            return toast.error("Max thumbnail size 0.5 MB allowed")
+        }
+
         const formData = new FormData();
         formData.append('title', title);
         formData.append('description', description);
@@ -49,20 +58,22 @@ const VideoUploaderV2 = () => {
             console.log({ res });
             setErrorMessage("")
         } catch (error) {
-            setErrorMessage(error.response.data.error)
+            setErrorMessage(error?.response?.data?.error)
             console.error("video uploading error", error)
         }
     }
 
     return (
         <>
-            <Button size="lg" onClick={() => setIsOpen(true)}>Upload Video V2</Button>
+            <Button size="lg" onClick={() => setIsOpen(true)}>Upload Video</Button>
             {isOpen &&
                 <section className='fixed inset-0 bg-black/70 transition-opacity flex items-center justify-center z-50'>
                     <div className='max-w-xl md:max-w-4xl w-[95%] max-h-[90vh] sm: overflow-y-auto rounded-lg bg-background text-foreground sm:p-4 p-2'>
                         <div className='flex justify-between items-center '>
-                            <h3 className='text-xl font-semibold p-2'>Dialog Title</h3>
-                            <button onClick={() => setIsOpen(false)}><X className='w-6' /></button>
+                            <h3 className='text-xl font-semibold p-2'>Upload Video</h3>
+                            <button onClick={() => setIsOpen(false)}>
+                                <X className='w-6' />
+                            </button>
                         </div>
                         <form onSubmit={handleSubmit} className="space-y-4 p-2">
                             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>

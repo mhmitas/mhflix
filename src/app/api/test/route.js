@@ -9,8 +9,8 @@ export async function POST(request) {
         const description = await formData.get('description');
         console.log({ video, thumbnail, title, description });
 
-        if (video.size > (10 * 1000000)) {
-            return NextResponse.json({ error: "Max video size 10 MB" }, { status: 400 })
+        if (video.size > (15 * 1000000)) {
+            return NextResponse.json({ error: "Max video size 15 MB allowed" }, { status: 400 })
         }
         if (thumbnail.size > (0.5 * 1000000)) {
             return NextResponse.json({ error: "Max thumbnail image size 500 KB" }, { status: 400 })

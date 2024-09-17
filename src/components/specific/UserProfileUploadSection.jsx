@@ -1,6 +1,5 @@
 import React from 'react'
 import { Button } from '../ui/button'
-import UploadVideo from '../modals/UploadVideo'
 import VideoUploader from '../modals/VideoUploader'
 
 const UserProfileUploadSection = () => {

@@ -1,10 +1,22 @@
 import { NextResponse } from "next/server"
 
-export async function GET() {
+export async function POST(request) {
     try {
-        const res = await fetch(`http://localhost:5000/api/v1/videos/get-videos`)
-        const data = await res.json()
-        return NextResponse.json(data, { status: 200 })
+        const formData = await request.formData();
+        const video = await formData.get('video');
+        const thumbnail = await formData.get('thumbnail');
+        const title = await formData.get('title');
+        const description = await formData.get('description');
+        console.log({ video, thumbnail, title, description });
+
+        if (video.size > (10 * 1000000)) {
+            return NextResponse.json({ error: "Max video size 10 MB" }, { status: 400 })
+        }
+        if (thumbnail.size > (0.5 * 1000000)) {
+            return NextResponse.json({ error: "Max thumbnail image size 500 KB" }, { status: 400 })
+        }
+
+        return NextResponse.json({ message: "ok" })
     } catch (error) {
         return NextResponse.json({ error: error.message }, { status: 400 })
     }

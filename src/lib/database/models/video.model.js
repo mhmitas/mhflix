@@ -1,4 +1,4 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose, { models, Schema } from "mongoose";
 
 const videoSchema = new Schema(
     {
@@ -15,10 +15,6 @@ const videoSchema = new Schema(
         },
         thumbnail: {
             type: String
-        },
-        duration: {
-            type: String,
-            required: true
         },
         owner: {
             type: mongoose.Types.ObjectId,
@@ -37,4 +33,4 @@ const videoSchema = new Schema(
 )
 
 
-export const Video = mongoose.model("Video", videoSchema) 
+export const Video = models.Video || mongoose.model("Video", videoSchema) 

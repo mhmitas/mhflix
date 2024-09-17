@@ -1,14 +1,14 @@
 'use client'
 import React, { useState } from 'react'
 import { Button } from '../ui/button'
-import { ImageIcon, Upload, X } from 'lucide-react'
+import { ImageIcon, Loader2, Upload, X } from 'lucide-react'
 import { useDropzone } from 'react-dropzone'
 import { Textarea } from '../ui/textarea'
 import axios from 'axios'
 import toast from 'react-hot-toast'
-import { Input } from '../ui/input'
 
-const VideoUploaderV2 = () => {
+const VideoUploaderV2 = ({ session }) => {
+    const [processing, setProcessing] = useState(false)
     const [isOpen, setIsOpen] = useState(false)
     const [videoUrl, setVideoUrl] = useState(null)
     const [videoFile, setVideoFile] = useState(null)
@@ -33,12 +33,13 @@ const VideoUploaderV2 = () => {
 
     async function handleSubmit(e) {
         e.preventDefault();
+        setProcessing(true)
         const form = e.target;
         const title = form.title.value;
         const description = form.description.value;
-        const duration = form.duration.value;
         const thumbnail = thumbnailFile;
         const video = videoFile;
+        const ownerId = session?.user?.id
 
         if (!thumbnail || !video) {
             return toast.error("Video and Thumbnail is required")
@@ -53,16 +54,27 @@ const VideoUploaderV2 = () => {
         const formData = new FormData();
         formData.append('title', title);
         formData.append('description', description);
-        formData.append('duration', duration);
+        formData.append('ownerId', ownerId);
         formData.append('thumbnail', thumbnail);
         formData.append('video', video);
         try {
             const res = await axios.post("/api/test", formData)
-            console.log({ res });
+            console.log(res.data);
+            if (res.status === 200) {
+                toast.success("Video uploaded successfully")
+                e.target.reset()
+                setVideoUrl("")
+                setThumbnailUrl("")
+                setVideoFile(null)
+                setThumbnailFile(null)
+                setIsOpen(false)
+            }
+            setProcessing(false)
             setErrorMessage("")
         } catch (error) {
             setErrorMessage(error?.response?.data?.error)
             console.error("video uploading error", error)
+            setProcessing(false)
         }
     }
 
@@ -114,19 +126,20 @@ const VideoUploaderV2 = () => {
 
                             <div>
                                 <label className="block text-sm font-medium  py-1">Title</label>
-                                <Textarea name="title" required className="font-normal text-base focus-visible:ring-primary/50 bg-muted" maxlength={150} />
+                                <Textarea name="title" required className="font-normal text-base focus-visible:ring-primary/50 bg-muted" maxLength={150} />
                             </div>
                             <div>
                                 <label className="block text-sm font-medium  py-1">Description</label>
-                                <Textarea name="description" required className="text-base min-h-32 focus-visible:ring-primary/50 bg-muted" maxlength={1500} />
-                            </div>
-                            <div>
-                                <label className="block text-sm font-medium  py-1">Duration</label>
-                                <Input name="duration" required placeholder="01:30:00" className="text-base focus-visible:ring-primary/50 bg-muted w-max" />
+                                <Textarea name="description" required className="text-base min-h-32 focus-visible:ring-primary/50 bg-muted" maxLength={1500} />
                             </div>
                             {errorMessage && <p className='text-destructive'>{errorMessage}</p>}
                             <div className="text-center mt-4">
-                                <Button type="submit">Upload</Button>
+                                <Button disabled={processing} type="submit" className="text-base">
+                                    {processing ?
+                                        <span className='flex items-center gap-2'><Loader2 className='animate-spin w-5' />Processing</span> :
+                                        "Upload"
+                                    }
+                                </Button>
                             </div>
                         </form>
                     </div>

@@ -1,22 +1,57 @@
+import { uploadImageOnCloudinary, uploadVideoOnCloudinary } from "@/lib/cloudinary/UploadFileOnCloudinary";
+import { Video } from "@/lib/database/models/video.model";
+import { isValidObjectId } from "mongoose";
 import { NextResponse } from "next/server"
+
+/* 
+# video upload process:
+- get all data form the request
+- validate data
+- upload the video then upload the thumbnail
+
+*/
 
 export async function POST(request) {
     try {
         const formData = await request.formData();
-        const video = await formData.get('video');
-        const thumbnail = await formData.get('thumbnail');
+        const videoFile = await formData.get('video');
+        const thumbnailFile = await formData.get('thumbnail');
         const title = await formData.get('title');
         const description = await formData.get('description');
-        console.log({ video, thumbnail, title, description });
+        const ownerId = await formData.get('ownerId');
+        // console.log({ videoFile, thumbnailFile, title, description });
 
-        if (video.size > (15 * 1000000)) {
+        if (!isValidObjectId(ownerId)) {
+            return NextResponse.json({ error: "Request not allowed." }, { status: 401 })
+        }
+
+        if (videoFile.size > (15 * 1000000)) {
             return NextResponse.json({ error: "Max video size 15 MB allowed" }, { status: 400 })
         }
-        if (thumbnail.size > (0.5 * 1000000)) {
+        if (thumbnailFile.size > (0.5 * 1000000)) {
             return NextResponse.json({ error: "Max thumbnail image size 500 KB" }, { status: 400 })
         }
 
-        return NextResponse.json({ message: "ok" })
+        // upload thumbnail to cloudinary.
+        const thumbnailUrl = await uploadImageOnCloudinary(thumbnailFile)
+        // upload video to cloudinary.
+        const videoObj = await uploadVideoOnCloudinary(videoFile)
+        // make ready for uploading on database
+        const videoData = {
+            title,
+            description,
+            video: videoObj,
+            thumbnail: thumbnailUrl,
+            owner: ownerId,
+        }
+
+        const result = await Video.create(videoData)
+
+        if (!result) {
+            return NextResponse.json({ error: 'Error creating video' }, { status: 400 })
+        }
+
+        return NextResponse.json(result, { status: 200 })
     } catch (error) {
         return NextResponse.json({ error: error.message }, { status: 400 })
     }

@@ -5,7 +5,7 @@ export function cn(...inputs) {
   return twMerge(clsx(inputs));
 }
 
-export function formatNumber(num) {
+export function formatNumber(num = 0) {
   if (num >= 1e9) {
     return (num / 1e9).toFixed(1) + 'B'; // Billions
   } else if (num >= 1e6) {

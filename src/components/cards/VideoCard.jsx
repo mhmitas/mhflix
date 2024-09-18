@@ -4,11 +4,17 @@ import moment from 'moment';
 import { formatNumber } from '@/lib/utils';
 import Link from 'next/link';
 import { ThumbsUp } from 'lucide-react';
+import { User } from '@/lib/database/models/user.model';
+import { Types } from 'mongoose';
 
-const VideoCard = ({ video }) => {
-    const { duration, thumbnail, title, likes, channel } = video;
+const VideoCard = async ({ video }) => {
+    const { duration, thumbnail, title, likes, channel, owner: ownerId } = video;
 
     const uploaded = moment(new Date(video.createdAt), "YYYYMMDD").fromNow();
+    console.log(ownerId);
+
+    const owner = await User.findOne({ id: new Types.ObjectId(ownerId) }).select("-password");
+    // console.log(owner)
 
     return (
         <div className='h-full w-full max-w-xl mx-auto rounded-lg sm:rounded-xl group hover:cursor-pointer duration-500 mb-2'>
@@ -31,7 +37,7 @@ const VideoCard = ({ video }) => {
                     <Link href={`/play-video/${video?._id}`}><h1 title={title} className='text-lg line-clamp-2 leading-6'>{title}</h1></Link>
 
                     {/* channel name */}
-                    <Link href={`/profile/@${channel?.username}`}><h1 className={`hover:underline leading-6`}>{channel?.fullName}</h1></Link>
+                    <Link href={`/profile/@${channel?.username}`}><h1 className={`hover:underline leading-6`}>{channel?.name}</h1></Link>
 
                     {/* like time and video */}
                     <div className='flex items-center gap-1 text-color-gray leading-4 text-sm'>

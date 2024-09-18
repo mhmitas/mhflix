@@ -1,30 +1,9 @@
-'use client'
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
-import VideoCard from '../cards/VideoCard'
+import React from 'react'
 
-const HomeVideosSection = () => {
-    const [videos, setVideos] = useState([])
-
-    useEffect(() => {
-        async function fetchVideos() {
-            try {
-                const res = await axios.get("/api/test")
-                // console.log(res.data.data);
-                setVideos(res?.data?.data)
-            } catch (error) {
-                console.error("video fetch error", error)
-            }
-        }
-        fetchVideos()
-    }, [])
-
-
+export const HomeVideosSection = () => {
     return (
-        <section className='max-w-screen-2xl mx-auto w-full h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 flex-1 root-padding'>
-            {videos.map((video, index) => <VideoCard video={video} key={index} />)}
-        </section>
+        <div className='my-container'>
+            <h3 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-extrabold min-h-96 flex justify-center items-center'>Inshallah, I will complete this project one day.😑</h3>
+        </div>
     )
 }
-
-export default HomeVideosSection

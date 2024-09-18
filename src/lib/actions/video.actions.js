@@ -9,12 +9,8 @@ import { uploadImageOnCloudinary, uploadVideoOnCloudinary } from "../cloudinary/
 export async function fetchVideos() {
     await connectDB()
     try {
-        const res = await fetch('/api/test');
-        console.log(res);
-
-        const videos = await res.json();
-        console.log(videos.length);
-        return videos
+        const videos = await Video.find()
+        return { videos: JSON.parse(JSON.stringify(videos)) }
     } catch (error) {
         console.log(error);
         return { error: error.message || "Something went wrong" };

@@ -33,6 +33,7 @@ const VideoUploader = () => {
 
     async function handleSubmit(e) {
         e.preventDefault();
+        return alert("This component in not using")
         const form = e.target;
         const title = form.title.value;
         const description = form.description.value;

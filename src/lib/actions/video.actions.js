@@ -3,6 +3,7 @@
 import mongoose from "mongoose";
 import { Video } from "../database/models/video.model";
 import { connectDB } from "../database/mongoose";
+import { uploadImageOnCloudinary, uploadVideoOnCloudinary } from "../cloudinary/UploadFileOnCloudinary";
 
 
 export async function fetchVideos() {
@@ -29,5 +30,36 @@ export async function getUserVideos(userId) {
     } catch (error) {
         console.error("User video fetching error", error);
         throw new Error(`User video fetching error: ` + error)
+    }
+}
+
+export async function uploadVideo(formData) {
+    try {
+        await connectDB()
+
+        const video = await formData.get('video')
+        const thumbnail = await formData.get('thumbnail')
+        const title = await formData.get('title')
+        const description = await formData.get('description')
+
+        const thumbnailUploadedRes = await uploadImageOnCloudinary(thumbnail)
+        const videoUploadedRes = await uploadVideoOnCloudinary(video)
+
+        console.log({ video: videoUploadedRes, thumbnail: thumbnailUploadedRes })
+
+        const videoData = {
+            title,
+            description,
+            video: videoUploadedRes,
+            thumbnail: thumbnailUploadedRes,
+            owner: '66e99bdbc86067b798d36564',
+        }
+
+        const result = await Video.create(videoData)
+
+        return JSON.parse(JSON.stringify(result))
+    } catch (error) {
+        console.error("Video upload error", error);
+        throw error
     }
 }
